@@ -10,8 +10,8 @@
   "name":"Wall",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"R1Objects",
+    "path":"folders/Objects/R1Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
@@ -32,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"BackgroundSprite",
-    "path":"sprites/BackgroundSprite/BackgroundSprite.yy",
+    "name":"R1BackgroundSprite",
+    "path":"sprites/R1BackgroundSprite/R1BackgroundSprite.yy",
   },
   "spriteMaskId":null,
   "visible":false,

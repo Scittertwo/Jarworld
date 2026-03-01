@@ -16,8 +16,8 @@
   "name":"SuperWhirlpool",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"R1Objects",
+    "path":"folders/Objects/R1Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
