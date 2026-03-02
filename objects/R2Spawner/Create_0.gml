@@ -1,22 +1,25 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 1D730869
-/// @DnDInput : 6
+/// @DnDInput : 7
 /// @DnDArgument : "expr_3" "500"
 /// @DnDArgument : "expr_4" "1200"
 /// @DnDArgument : "expr_5" "15"
+/// @DnDArgument : "expr_6" "3"
 /// @DnDArgument : "var" "Rev"
 /// @DnDArgument : "var_1" "WhirlSpawn"
 /// @DnDArgument : "var_2" "Cooldown"
 /// @DnDArgument : "var_3" "MinCosmeticBubbles"
 /// @DnDArgument : "var_4" "MaxCosmeticBubbles"
 /// @DnDArgument : "var_5" "CosBubSpawnTime"
+/// @DnDArgument : "var_6" "Cooldown"
 Rev = 0;
 WhirlSpawn = 0;
 Cooldown = 0;
 MinCosmeticBubbles = 500;
 MaxCosmeticBubbles = 1200;
 CosBubSpawnTime = 15;
+Cooldown = 3;
 
 /// @DnDAction : YoYo Games.Common.Set_Global
 /// @DnDVersion : 1

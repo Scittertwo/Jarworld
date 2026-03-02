@@ -16,8 +16,8 @@
   "name":"R2Spore",
   "overriddenProperties":[],
   "parent":{
-    "name":"R2Objects",
-    "path":"folders/Objects/R2Objects.yy",
+    "name":"R1Objects",
+    "path":"folders/Objects/R1Objects.yy",
   },
   "parentObjectId":null,
   "persistent":false,
