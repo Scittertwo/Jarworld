@@ -1,9 +1,10 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 0D45E4FE
-/// @DnDInput : 12
+/// @DnDInput : 14
 /// @DnDArgument : "expr_2" "100"
 /// @DnDArgument : "expr_6" "0.1"
+/// @DnDArgument : "expr_12" "3"
 /// @DnDArgument : "var" "Speed"
 /// @DnDArgument : "var_1" "Energy"
 /// @DnDArgument : "var_2" "Health"
@@ -16,6 +17,8 @@
 /// @DnDArgument : "var_9" "CanBreed"
 /// @DnDArgument : "var_10" "CanHeal"
 /// @DnDArgument : "var_11" "Control"
+/// @DnDArgument : "var_12" "SpriteOptions"
+/// @DnDArgument : "var_13" "BumpCount"
 Speed = 0;
 Energy = 0;
 Health = 100;
@@ -28,14 +31,16 @@ TargetEnergy = 0;
 CanBreed = 0;
 CanHeal = 0;
 Control = 0;
+SpriteOptions = 3;
+BumpCount = 0;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
 /// @DnDHash : 39D4B8E8
 /// @DnDArgument : "var" "Size"
-/// @DnDArgument : "min" "0.1"
-/// @DnDArgument : "max" "0.5"
-Size = (random_range(0.1, 0.5));
+/// @DnDArgument : "min" "0.05"
+/// @DnDArgument : "max" "0.25"
+Size = (random_range(0.05, 0.25));
 
 /// @DnDAction : YoYo Games.Instances.Sprite_Scale
 /// @DnDVersion : 1
@@ -104,9 +109,18 @@ speed = Speed;
 /// @DnDVersion : 1
 /// @DnDHash : 10C4221B
 /// @DnDArgument : "var" "MaxSize"
-/// @DnDArgument : "min" "0.7"
-/// @DnDArgument : "max" "1.2"
-MaxSize = (random_range(0.7, 1.2));
+/// @DnDArgument : "min" "0.5"
+/// @DnDArgument : "max" "1.5"
+MaxSize = (random_range(0.5, 1.5));
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
+/// @DnDHash : 521841C4
+/// @DnDArgument : "var" "SpriteChoice"
+/// @DnDArgument : "type" "1"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "SpriteOptions"
+SpriteChoice = floor(random_range(1, SpriteOptions + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

@@ -45,9 +45,9 @@ Size = (random_range(0.03, 0.07));
 /// @DnDHash : 2D37792B
 /// @DnDArgument : "var" "TargetGrowth"
 /// @DnDArgument : "type" "1"
-/// @DnDArgument : "min" "20"
+/// @DnDArgument : "min" "10"
 /// @DnDArgument : "max" "50"
-TargetGrowth = floor(random_range(20, 50 + 1));
+TargetGrowth = floor(random_range(10, 50 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

@@ -42,15 +42,25 @@ if(Growth < TargetGrowth){	/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
 /// @DnDHash : 6518F8C0
-else{	/// @DnDAction : YoYo Games.Instances.Create_Instance
+else{	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 4FE1D7E6
+	/// @DnDParent : 6518F8C0
+	/// @DnDArgument : "var" "ty"
+	/// @DnDArgument : "min" "-70"
+	/// @DnDArgument : "max" "-10"
+	ty = (random_range(-70, -10));
+
+	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDVersion : 1
 	/// @DnDHash : 3BDA03FF
 	/// @DnDParent : 6518F8C0
 	/// @DnDArgument : "xpos_relative" "1"
+	/// @DnDArgument : "ypos" "ty"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "objectid" "Fish"
 	/// @DnDSaveInfo : "objectid" "Fish"
-	instance_create_layer(x + 0, y + 0, "Instances", Fish);
+	instance_create_layer(x + 0, y + ty, "Instances", Fish);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

@@ -19,6 +19,20 @@ ty = (random_range(-50, 100));
 /// @DnDHash : 451B76AF
 image_angle = 0;
 
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 77298C9D
+/// @DnDArgument : "var" "BumpCount"
+/// @DnDArgument : "op" "2"
+if(BumpCount > 0){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 4AD34D20
+	/// @DnDParent : 77298C9D
+	/// @DnDArgument : "expr" "-1"
+	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "var" "BumpCount"
+	BumpCount += -1;}
+
 /// @DnDAction : YoYo Games.Movement.Set_Direction_Point
 /// @DnDVersion : 1
 /// @DnDHash : 1788C924

@@ -5,12 +5,19 @@
 /// @DnDArgument : "value" "1"
 if(CanBreed == 1){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
+	/// @DnDHash : 1AB6F207
+	/// @DnDParent : 7AC38A68
+	/// @DnDArgument : "var" "CanBreed"
+	CanBreed = 0;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
 	/// @DnDHash : 0F8C3924
 	/// @DnDParent : 7AC38A68
-	/// @DnDArgument : "expr" "TargetEnergy-TargetEnergy*2"
+	/// @DnDArgument : "expr" "-80"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "Energy"
-	Energy += TargetEnergy-TargetEnergy*2;
+	Energy += -80;
 
 	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
@@ -18,9 +25,15 @@ if(CanBreed == 1){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDParent : 7AC38A68
 	/// @DnDArgument : "var" "EggCount"
 	/// @DnDArgument : "type" "1"
-	/// @DnDArgument : "min" "3"
+	/// @DnDArgument : "min" "2"
 	/// @DnDArgument : "max" "7"
-	EggCount = floor(random_range(3, 7 + 1));
+	EggCount = floor(random_range(2, 7 + 1));
+
+	/// @DnDAction : YoYo Games.Movement.Reverse
+	/// @DnDVersion : 1
+	/// @DnDHash : 0FCB8A85
+	/// @DnDParent : 7AC38A68
+	direction = (direction + 180) % 360;
 
 	/// @DnDAction : YoYo Games.Loops.Repeat
 	/// @DnDVersion : 1
@@ -44,4 +57,13 @@ else{	/// @DnDAction : YoYo Games.Movement.Reverse
 	/// @DnDVersion : 1
 	/// @DnDHash : 4A8E00D6
 	/// @DnDParent : 48965F08
-	direction = (direction + 180) % 360;}
+	direction = (direction + 180) % 360;
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 3F550094
+	/// @DnDParent : 48965F08
+	/// @DnDArgument : "expr" "1"
+	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "var" "BumpCount"
+	BumpCount += 1;}
