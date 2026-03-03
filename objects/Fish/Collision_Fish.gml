@@ -14,10 +14,9 @@ if(CanBreed == 1){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 0F8C3924
 	/// @DnDParent : 7AC38A68
-	/// @DnDArgument : "expr" "-80"
-	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "expr" "70"
 	/// @DnDArgument : "var" "Energy"
-	Energy += -80;
+	Energy = 70;
 
 	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
@@ -25,9 +24,9 @@ if(CanBreed == 1){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDParent : 7AC38A68
 	/// @DnDArgument : "var" "EggCount"
 	/// @DnDArgument : "type" "1"
-	/// @DnDArgument : "min" "2"
-	/// @DnDArgument : "max" "7"
-	EggCount = floor(random_range(2, 7 + 1));
+	/// @DnDArgument : "min" "1"
+	/// @DnDArgument : "max" "4"
+	EggCount = floor(random_range(1, 4 + 1));
 
 	/// @DnDAction : YoYo Games.Movement.Reverse
 	/// @DnDVersion : 1

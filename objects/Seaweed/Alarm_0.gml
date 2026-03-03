@@ -124,48 +124,64 @@ if(Planted == 1){	/// @DnDAction : YoYo Games.Movement.Set_Speed
 		/// @DnDVersion : 1
 		/// @DnDHash : 535ABE1C
 		/// @DnDParent : 448328C9
-		else{	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+		else{	/// @DnDAction : YoYo Games.Instances.Instance_Get_Count
 			/// @DnDVersion : 1
-			/// @DnDHash : 5813A1F4
+			/// @DnDHash : 52C26526
 			/// @DnDParent : 535ABE1C
-			/// @DnDArgument : "var" "SporeCount"
-			/// @DnDArgument : "type" "1"
-			/// @DnDArgument : "min" "1"
-			/// @DnDArgument : "max" "3"
-			SporeCount = floor(random_range(1, 3 + 1));
+			/// @DnDArgument : "var" "SeaweedN"
+			/// @DnDArgument : "object" "Seaweed"
+			/// @DnDSaveInfo : "object" "Seaweed"
+			SeaweedN = instance_number(Seaweed);
 		
-			/// @DnDAction : YoYo Games.Loops.Repeat
+			/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
-			/// @DnDHash : 6026F3F8
+			/// @DnDHash : 0424559A
 			/// @DnDParent : 535ABE1C
-			/// @DnDArgument : "times" "SporeCount"
-			repeat(SporeCount){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDArgument : "var" "SeaweedN"
+			/// @DnDArgument : "op" "1"
+			/// @DnDArgument : "value" "40"
+			if(SeaweedN < 40){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 				/// @DnDVersion : 1
-				/// @DnDHash : 4C2A7511
-				/// @DnDParent : 6026F3F8
-				/// @DnDArgument : "xpos_relative" "1"
-				/// @DnDArgument : "ypos" "-70"
-				/// @DnDArgument : "ypos_relative" "1"
-				/// @DnDArgument : "objectid" "SeaSpore"
-				/// @DnDSaveInfo : "objectid" "SeaSpore"
-				instance_create_layer(x + 0, y + -70, "Instances", SeaSpore);}
-		
-			/// @DnDAction : YoYo Games.Common.Variable
-			/// @DnDVersion : 1
-			/// @DnDHash : 4FC2BE50
-			/// @DnDParent : 535ABE1C
-			/// @DnDArgument : "var" "Energy"
-			Energy = 0;
-		
-			/// @DnDAction : YoYo Games.Random.Get_Random_Number
-			/// @DnDVersion : 1
-			/// @DnDHash : 0EF85058
-			/// @DnDParent : 535ABE1C
-			/// @DnDArgument : "var" "TargetEnergy"
-			/// @DnDArgument : "type" "1"
-			/// @DnDArgument : "min" "15"
-			/// @DnDArgument : "max" "25"
-			TargetEnergy = floor(random_range(15, 25 + 1));}}}
+				/// @DnDHash : 5813A1F4
+				/// @DnDParent : 0424559A
+				/// @DnDArgument : "var" "SporeCount"
+				/// @DnDArgument : "type" "1"
+				/// @DnDArgument : "min" "1"
+				/// @DnDArgument : "max" "3"
+				SporeCount = floor(random_range(1, 3 + 1));
+			
+				/// @DnDAction : YoYo Games.Loops.Repeat
+				/// @DnDVersion : 1
+				/// @DnDHash : 6026F3F8
+				/// @DnDParent : 0424559A
+				/// @DnDArgument : "times" "SporeCount"
+				repeat(SporeCount){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+					/// @DnDVersion : 1
+					/// @DnDHash : 4C2A7511
+					/// @DnDParent : 6026F3F8
+					/// @DnDArgument : "xpos_relative" "1"
+					/// @DnDArgument : "ypos" "-70"
+					/// @DnDArgument : "ypos_relative" "1"
+					/// @DnDArgument : "objectid" "SeaSpore"
+					/// @DnDSaveInfo : "objectid" "SeaSpore"
+					instance_create_layer(x + 0, y + -70, "Instances", SeaSpore);
+				
+					/// @DnDAction : YoYo Games.Common.Variable
+					/// @DnDVersion : 1
+					/// @DnDHash : 4FC2BE50
+					/// @DnDParent : 6026F3F8
+					/// @DnDArgument : "var" "Energy"
+					Energy = 0;
+				
+					/// @DnDAction : YoYo Games.Random.Get_Random_Number
+					/// @DnDVersion : 1
+					/// @DnDHash : 0EF85058
+					/// @DnDParent : 6026F3F8
+					/// @DnDArgument : "var" "TargetEnergy"
+					/// @DnDArgument : "type" "1"
+					/// @DnDArgument : "min" "15"
+					/// @DnDArgument : "max" "25"
+					TargetEnergy = floor(random_range(15, 25 + 1));}}}}}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1

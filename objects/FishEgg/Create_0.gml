@@ -2,7 +2,7 @@
 /// @DnDVersion : 1
 /// @DnDHash : 4F5273EA
 /// @DnDInput : 10
-/// @DnDArgument : "expr_9" "0.2"
+/// @DnDArgument : "expr_9" "0.12"
 /// @DnDArgument : "var" "Rotation"
 /// @DnDArgument : "var_1" "Speed"
 /// @DnDArgument : "var_2" "Tick"
@@ -22,7 +22,7 @@ Size = 0;
 Planted = 0;
 tx = 0;
 ty = 0;
-MaxSize = 0.2;
+MaxSize = 0.12;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

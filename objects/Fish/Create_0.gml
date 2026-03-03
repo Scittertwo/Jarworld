@@ -39,8 +39,8 @@ BumpCount = 0;
 /// @DnDHash : 39D4B8E8
 /// @DnDArgument : "var" "Size"
 /// @DnDArgument : "min" "0.05"
-/// @DnDArgument : "max" "0.25"
-Size = (random_range(0.05, 0.25));
+/// @DnDArgument : "max" "0.075"
+Size = (random_range(0.05, 0.075));
 
 /// @DnDAction : YoYo Games.Instances.Sprite_Scale
 /// @DnDVersion : 1
@@ -109,9 +109,8 @@ speed = Speed;
 /// @DnDVersion : 1
 /// @DnDHash : 10C4221B
 /// @DnDArgument : "var" "MaxSize"
-/// @DnDArgument : "min" "0.5"
-/// @DnDArgument : "max" "1.5"
-MaxSize = (random_range(0.5, 1.5));
+/// @DnDArgument : "min" "0.3"
+MaxSize = (random_range(0.3, 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

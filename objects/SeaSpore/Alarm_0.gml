@@ -47,11 +47,10 @@ else{	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDHash : 3BDA03FF
 	/// @DnDParent : 6518F8C0
 	/// @DnDArgument : "xpos_relative" "1"
-	/// @DnDArgument : "ypos" "-25"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "objectid" "Seaweed"
 	/// @DnDSaveInfo : "objectid" "Seaweed"
-	instance_create_layer(x + 0, y + -25, "Instances", Seaweed);
+	instance_create_layer(x + 0, y + 0, "Instances", Seaweed);
 
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1

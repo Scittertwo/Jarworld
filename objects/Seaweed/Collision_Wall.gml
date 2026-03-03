@@ -13,6 +13,6 @@ direction = (direction + 180) % 360;
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
 /// @DnDHash : 1DADF1BC
-/// @DnDArgument : "steps" "2"
+/// @DnDArgument : "steps" "25"
 /// @DnDArgument : "alarm" "2"
-alarm_set(2, 2);
+alarm_set(2, 25);
