@@ -48,21 +48,3 @@ if(CanBreed == 1){	/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDArgument : "objectid" "FishEgg"
 		/// @DnDSaveInfo : "objectid" "FishEgg"
 		instance_create_layer(x + 0, y + 0, "Instances", FishEgg);}}
-
-/// @DnDAction : YoYo Games.Common.Else
-/// @DnDVersion : 1
-/// @DnDHash : 48965F08
-else{	/// @DnDAction : YoYo Games.Movement.Reverse
-	/// @DnDVersion : 1
-	/// @DnDHash : 4A8E00D6
-	/// @DnDParent : 48965F08
-	direction = (direction + 180) % 360;
-
-	/// @DnDAction : YoYo Games.Common.Variable
-	/// @DnDVersion : 1
-	/// @DnDHash : 3F550094
-	/// @DnDParent : 48965F08
-	/// @DnDArgument : "expr" "1"
-	/// @DnDArgument : "expr_relative" "1"
-	/// @DnDArgument : "var" "BumpCount"
-	BumpCount += 1;}

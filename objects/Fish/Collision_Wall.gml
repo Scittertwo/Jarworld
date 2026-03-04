@@ -23,9 +23,9 @@ if(Speed > 5){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDHash : 3861DEBC
 	/// @DnDParent : 56D277DF
 	/// @DnDArgument : "var" "BubbleCount"
-	/// @DnDArgument : "min" "5"
-	/// @DnDArgument : "max" "10"
-	BubbleCount = (random_range(5, 10));
+	/// @DnDArgument : "min" "8"
+	/// @DnDArgument : "max" "15"
+	BubbleCount = (random_range(8, 15));
 
 	/// @DnDAction : YoYo Games.Loops.Repeat
 	/// @DnDVersion : 1

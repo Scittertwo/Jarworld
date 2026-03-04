@@ -6,10 +6,10 @@ if(Mature == 0){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 2E7D769C
 	/// @DnDParent : 036B05A1
-	/// @DnDArgument : "expr" "-10"
+	/// @DnDArgument : "expr" "-1"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "Health"
-	Health += -10;}
+	Health += -1;}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
