@@ -54,6 +54,22 @@ CrabN = instance_number(Crab);
 /// @DnDSaveInfo : "object" "CrabEgg"
 CrabEggN = instance_number(CrabEgg);
 
+/// @DnDAction : YoYo Games.Instances.Instance_Get_Count
+/// @DnDVersion : 1
+/// @DnDHash : 15AC4B08
+/// @DnDArgument : "var" "ShrimpN"
+/// @DnDArgument : "object" "Shrimp"
+/// @DnDSaveInfo : "object" "Shrimp"
+ShrimpN = instance_number(Shrimp);
+
+/// @DnDAction : YoYo Games.Instances.Instance_Get_Count
+/// @DnDVersion : 1
+/// @DnDHash : 6F0171E4
+/// @DnDArgument : "var" "FishCorpseN"
+/// @DnDArgument : "object" "FishCorpse"
+/// @DnDSaveInfo : "object" "FishCorpse"
+FishCorpseN = instance_number(FishCorpse);
+
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 5531C563
@@ -210,6 +226,33 @@ if(CrabN < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
 					/// @DnDArgument : "objectid" "CrabEgg"
 					/// @DnDSaveInfo : "objectid" "CrabEgg"
 					instance_create_layer(x + 0, y + 0, "Instances", CrabEgg);}}}}}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 4793A0BE
+/// @DnDArgument : "var" "FishCorpseN"
+/// @DnDArgument : "op" "4"
+/// @DnDArgument : "value" "3"
+if(FishCorpseN >= 3){	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 08E62335
+	/// @DnDParent : 4793A0BE
+	/// @DnDArgument : "var" "ShrimpN"
+	/// @DnDArgument : "op" "3"
+	if(ShrimpN <= 0){	/// @DnDAction : YoYo Games.Loops.Repeat
+		/// @DnDVersion : 1
+		/// @DnDHash : 3914EAEC
+		/// @DnDParent : 08E62335
+		/// @DnDArgument : "times" "FishCorpseN*2"
+		repeat(FishCorpseN*2){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDVersion : 1
+			/// @DnDHash : 31A3E33E
+			/// @DnDParent : 3914EAEC
+			/// @DnDArgument : "xpos_relative" "1"
+			/// @DnDArgument : "ypos_relative" "1"
+			/// @DnDArgument : "objectid" "Shrimp"
+			/// @DnDSaveInfo : "objectid" "Shrimp"
+			instance_create_layer(x + 0, y + 0, "Instances", Shrimp);}}}
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

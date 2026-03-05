@@ -26,9 +26,9 @@ if(CanBreed == 1){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDParent : 7AC38A68
 	/// @DnDArgument : "var" "EggCount"
 	/// @DnDArgument : "type" "1"
-	/// @DnDArgument : "min" "1"
-	/// @DnDArgument : "max" "4"
-	EggCount = floor(random_range(1, 4 + 1));
+	/// @DnDArgument : "min" "2"
+	/// @DnDArgument : "max" "6"
+	EggCount = floor(random_range(2, 6 + 1));
 
 	/// @DnDAction : YoYo Games.Movement.Reverse
 	/// @DnDVersion : 1
