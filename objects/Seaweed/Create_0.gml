@@ -46,17 +46,17 @@ Tick = (random_range(0.5, 3));
 /// @DnDVersion : 1
 /// @DnDHash : 6EBB41CE
 /// @DnDArgument : "var" "TargetSize"
-/// @DnDArgument : "min" "0.3"
-/// @DnDArgument : "max" "0.7"
-TargetSize = (random_range(0.3, 0.7));
+/// @DnDArgument : "min" "0.1"
+/// @DnDArgument : "max" "0.5"
+TargetSize = (random_range(0.1, 0.5));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
 /// @DnDHash : 00A4B646
 /// @DnDArgument : "var" "Size"
 /// @DnDArgument : "min" "0.05"
-/// @DnDArgument : "max" "0.2"
-Size = (random_range(0.05, 0.2));
+/// @DnDArgument : "max" "0.075"
+Size = (random_range(0.05, 0.075));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

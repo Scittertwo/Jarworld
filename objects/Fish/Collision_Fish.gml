@@ -13,10 +13,12 @@ if(CanBreed == 1){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 0F8C3924
+	/// @DnDInput : 2
 	/// @DnDParent : 7AC38A68
 	/// @DnDArgument : "expr" "70"
 	/// @DnDArgument : "var" "Energy"
 	Energy = 70;
+	variable = 0;
 
 	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1

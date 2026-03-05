@@ -1,9 +1,10 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 0A567AB7
-/// @DnDInput : 18
+/// @DnDInput : 19
 /// @DnDArgument : "expr_1" "0.01"
-/// @DnDArgument : "expr_3" "100"
+/// @DnDArgument : "expr_3" "10"
+/// @DnDArgument : "expr_18" "10"
 /// @DnDArgument : "var" "Speed"
 /// @DnDArgument : "var_1" "Size"
 /// @DnDArgument : "var_2" "Energy"
@@ -22,10 +23,11 @@
 /// @DnDArgument : "var_15" "Jump"
 /// @DnDArgument : "var_16" "JumpDistance"
 /// @DnDArgument : "var_17" "ReadyForKelp"
+/// @DnDArgument : "var_18" "MaxHealth"
 Speed = 0;
 Size = 0.01;
 Energy = 0;
-Health = 100;
+Health = 10;
 tx = 0;
 ty = 0;
 MaxSize = 0;
@@ -40,6 +42,7 @@ Tick = 0;
 Jump = 0;
 JumpDistance = 0;
 ReadyForKelp = 0;
+MaxHealth = 10;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -108,16 +111,17 @@ direction = point_direction(x, y, x + tx, y + ty);
 /// @DnDVersion : 1
 /// @DnDHash : 6EC1D4AE
 /// @DnDArgument : "var" "MaxSize"
-/// @DnDArgument : "min" "0.4"
-MaxSize = (random_range(0.4, 1));
+/// @DnDArgument : "min" "0.2"
+/// @DnDArgument : "max" "0.5"
+MaxSize = (random_range(0.2, 0.5));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
 /// @DnDHash : 33AB464A
 /// @DnDArgument : "var" "Tick"
-/// @DnDArgument : "min" "0.5"
-/// @DnDArgument : "max" "2"
-Tick = (random_range(0.5, 2));
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "2.5"
+Tick = (random_range(1, 2.5));
 
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1

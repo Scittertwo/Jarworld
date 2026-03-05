@@ -70,9 +70,9 @@ Energy = floor(random_range(40, 80 + 1));
 /// @DnDHash : 49A92D1B
 /// @DnDArgument : "var" "TargetEnergy"
 /// @DnDArgument : "type" "1"
-/// @DnDArgument : "min" "100"
-/// @DnDArgument : "max" "150"
-TargetEnergy = floor(random_range(100, 150 + 1));
+/// @DnDArgument : "min" "90"
+/// @DnDArgument : "max" "100"
+TargetEnergy = floor(random_range(90, 100 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -109,8 +109,9 @@ speed = Speed;
 /// @DnDVersion : 1
 /// @DnDHash : 10C4221B
 /// @DnDArgument : "var" "MaxSize"
-/// @DnDArgument : "min" "0.3"
-MaxSize = (random_range(0.3, 1));
+/// @DnDArgument : "min" "0.2"
+/// @DnDArgument : "max" "0.7"
+MaxSize = (random_range(0.2, 0.7));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

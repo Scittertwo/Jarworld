@@ -27,8 +27,8 @@ if(Size < MaxSize){	/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDArgument : "var" "EnergyTemp"
 /// @DnDArgument : "type" "1"
 /// @DnDArgument : "min" "3"
-/// @DnDArgument : "max" "7"
-EnergyTemp = floor(random_range(3, 7 + 1));
+/// @DnDArgument : "max" "10"
+EnergyTemp = floor(random_range(3, 10 + 1));
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

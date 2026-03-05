@@ -2,7 +2,7 @@
 /// @DnDVersion : 1
 /// @DnDHash : 4F5273EA
 /// @DnDInput : 10
-/// @DnDArgument : "expr_9" "0.12"
+/// @DnDArgument : "expr_9" "0.15"
 /// @DnDArgument : "var" "Rotation"
 /// @DnDArgument : "var_1" "Speed"
 /// @DnDArgument : "var_2" "Tick"
@@ -22,7 +22,7 @@ Size = 0;
 Planted = 0;
 tx = 0;
 ty = 0;
-MaxSize = 0.12;
+MaxSize = 0.15;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -37,8 +37,8 @@ Rotation = (random_range(-360, 360));
 /// @DnDHash : 5B59DA1F
 /// @DnDArgument : "var" "Size"
 /// @DnDArgument : "min" "0.03"
-/// @DnDArgument : "max" "0.07"
-Size = (random_range(0.03, 0.07));
+/// @DnDArgument : "max" "0.05"
+Size = (random_range(0.03, 0.05));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -46,8 +46,8 @@ Size = (random_range(0.03, 0.07));
 /// @DnDArgument : "var" "TargetGrowth"
 /// @DnDArgument : "type" "1"
 /// @DnDArgument : "min" "10"
-/// @DnDArgument : "max" "50"
-TargetGrowth = floor(random_range(10, 50 + 1));
+/// @DnDArgument : "max" "60"
+TargetGrowth = floor(random_range(10, 60 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -61,9 +61,9 @@ tx = (random_range(-80, 80));
 /// @DnDVersion : 1
 /// @DnDHash : 6549C139
 /// @DnDArgument : "var" "Speed"
-/// @DnDArgument : "min" "0.2"
-/// @DnDArgument : "max" "0.5"
-Speed = (random_range(0.2, 0.5));
+/// @DnDArgument : "min" "0.1"
+/// @DnDArgument : "max" "0.6"
+Speed = (random_range(0.1, 0.6));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

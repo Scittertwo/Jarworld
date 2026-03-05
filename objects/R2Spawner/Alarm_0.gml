@@ -78,9 +78,9 @@ if(Cooldown < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDParent : 66F3C778
 			/// @DnDArgument : "var" "SporeCount"
 			/// @DnDArgument : "type" "1"
-			/// @DnDArgument : "min" "3"
-			/// @DnDArgument : "max" "7"
-			SporeCount = floor(random_range(3, 7 + 1));
+			/// @DnDArgument : "min" "1"
+			/// @DnDArgument : "max" "10"
+			SporeCount = floor(random_range(1, 10 + 1));
 		
 			/// @DnDAction : YoYo Games.Loops.Repeat
 			/// @DnDVersion : 1
@@ -111,8 +111,8 @@ if(Cooldown < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDParent : 5531C563
 	/// @DnDArgument : "var" "FishN"
 	/// @DnDArgument : "op" "1"
-	/// @DnDArgument : "value" "1"
-	if(FishN < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDArgument : "value" "2"
+	if(FishN < 2){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 60DC2B3B
 		/// @DnDParent : 53621BAA
@@ -179,30 +179,37 @@ if(CrabN < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDArgument : "var" "FishN"
 		/// @DnDArgument : "op" "4"
 		/// @DnDArgument : "value" "4"
-		if(FishN >= 4){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+		if(FishN >= 4){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
-			/// @DnDHash : 7E9A3D58
+			/// @DnDHash : 34897592
 			/// @DnDParent : 1C910038
-			/// @DnDArgument : "var" "CrabSpawn"
-			/// @DnDArgument : "type" "1"
-			/// @DnDArgument : "min" "2"
-			/// @DnDArgument : "max" "4"
-			CrabSpawn = floor(random_range(2, 4 + 1));
-		
-			/// @DnDAction : YoYo Games.Loops.Repeat
-			/// @DnDVersion : 1
-			/// @DnDHash : 3BBC844A
-			/// @DnDParent : 1C910038
-			/// @DnDArgument : "times" "CrabSpawn"
-			repeat(CrabSpawn){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+			/// @DnDArgument : "var" "FishEggN"
+			/// @DnDArgument : "op" "4"
+			/// @DnDArgument : "value" "4"
+			if(FishEggN >= 4){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 				/// @DnDVersion : 1
-				/// @DnDHash : 79A2D470
-				/// @DnDParent : 3BBC844A
-				/// @DnDArgument : "xpos_relative" "1"
-				/// @DnDArgument : "ypos_relative" "1"
-				/// @DnDArgument : "objectid" "CrabEgg"
-				/// @DnDSaveInfo : "objectid" "CrabEgg"
-				instance_create_layer(x + 0, y + 0, "Instances", CrabEgg);}}}}
+				/// @DnDHash : 7E9A3D58
+				/// @DnDParent : 34897592
+				/// @DnDArgument : "var" "CrabSpawn"
+				/// @DnDArgument : "type" "1"
+				/// @DnDArgument : "min" "2"
+				/// @DnDArgument : "max" "4"
+				CrabSpawn = floor(random_range(2, 4 + 1));
+			
+				/// @DnDAction : YoYo Games.Loops.Repeat
+				/// @DnDVersion : 1
+				/// @DnDHash : 3BBC844A
+				/// @DnDParent : 34897592
+				/// @DnDArgument : "times" "CrabSpawn"
+				repeat(CrabSpawn){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+					/// @DnDVersion : 1
+					/// @DnDHash : 79A2D470
+					/// @DnDParent : 3BBC844A
+					/// @DnDArgument : "xpos_relative" "1"
+					/// @DnDArgument : "ypos_relative" "1"
+					/// @DnDArgument : "objectid" "CrabEgg"
+					/// @DnDSaveInfo : "objectid" "CrabEgg"
+					instance_create_layer(x + 0, y + 0, "Instances", CrabEgg);}}}}}
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

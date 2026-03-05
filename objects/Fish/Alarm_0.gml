@@ -1,3 +1,10 @@
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 24BEFDE2
+/// @DnDArgument : "expr" "-1"
+/// @DnDArgument : "var" "EnergyTemp"
+EnergyTemp = -1;
+
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
 /// @DnDHash : 00742AFA
@@ -46,14 +53,6 @@ Speed = (random_range(0.1, 1.3));
 /// @DnDHash : 744D12C2
 /// @DnDArgument : "speed" "Speed"
 speed = Speed;
-
-/// @DnDAction : YoYo Games.Common.Variable
-/// @DnDVersion : 1
-/// @DnDHash : 659B74F5
-/// @DnDArgument : "expr" "-1"
-/// @DnDArgument : "expr_relative" "1"
-/// @DnDArgument : "var" "Energy"
-Energy += -1;
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -115,19 +114,19 @@ if(Energy > TargetEnergy){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 48C00860
 		/// @DnDParent : 68E5AF4C
-		/// @DnDArgument : "expr" "10"
+		/// @DnDArgument : "expr" "5"
 		/// @DnDArgument : "expr_relative" "1"
 		/// @DnDArgument : "var" "Health"
-		Health += 10;
+		Health += 5;
 	
 		/// @DnDAction : YoYo Games.Common.Variable
 		/// @DnDVersion : 1
 		/// @DnDHash : 6AA25629
 		/// @DnDParent : 68E5AF4C
-		/// @DnDArgument : "expr" "-5"
+		/// @DnDArgument : "expr" "-10"
 		/// @DnDArgument : "expr_relative" "1"
 		/// @DnDArgument : "var" "Energy"
-		Energy += -5;}}
+		Energy += -10;}}
 
 /// @DnDAction : YoYo Games.Common.Else
 /// @DnDVersion : 1
@@ -198,8 +197,18 @@ if(Energy < 30){	/// @DnDAction : YoYo Games.Instances.Color_Sprite
 /// @DnDHash : 1880DBD6
 /// @DnDArgument : "var" "Energy"
 /// @DnDArgument : "op" "4"
-/// @DnDArgument : "value" "50"
-if(Energy >= 50){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDArgument : "value" "100"
+if(Energy >= 100){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 2A40202D
+	/// @DnDParent : 1880DBD6
+	/// @DnDArgument : "var" "EnergyTemp"
+	/// @DnDArgument : "type" "1"
+	/// @DnDArgument : "min" "-1"
+	/// @DnDArgument : "max" "0"
+	EnergyTemp = floor(random_range(-1, 0 + 1));
+
+	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
 	/// @DnDHash : 6E608221
 	/// @DnDParent : 1880DBD6
@@ -213,10 +222,10 @@ if(Energy >= 50){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
 	/// @DnDHash : 60A4CDFD
 	/// @DnDParent : 1880DBD6
-	/// @DnDArgument : "expr" "tytemp"
+	/// @DnDArgument : "expr" "tytemp-tytemp*2"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "ty"
-	ty += tytemp;}
+	ty += tytemp-tytemp*2;}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -236,8 +245,16 @@ if(Energy >= 30){	/// @DnDAction : YoYo Games.Instances.Color_Sprite
 /// @DnDHash : 179E66DD
 /// @DnDArgument : "var" "Energy"
 /// @DnDArgument : "op" "1"
-/// @DnDArgument : "value" "50"
-if(Energy < 50){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDArgument : "value" "60"
+if(Energy < 60){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 3DA72F6F
+	/// @DnDParent : 179E66DD
+	/// @DnDArgument : "expr" "-1"
+	/// @DnDArgument : "var" "EnergyTemp"
+	EnergyTemp = -1;
+
+	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
 	/// @DnDHash : 7927E280
 	/// @DnDParent : 179E66DD
@@ -251,10 +268,10 @@ if(Energy < 50){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
 	/// @DnDHash : 2C39C8BB
 	/// @DnDParent : 179E66DD
-	/// @DnDArgument : "expr" "tytemp-tytemp*2"
+	/// @DnDArgument : "expr" "tytemp"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "ty"
-	ty += tytemp-tytemp*2;}
+	ty += tytemp;}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -285,6 +302,14 @@ Tick = (random_range(0.5, 3));
 /// @DnDArgument : "y" "ty"
 /// @DnDArgument : "y_relative" "1"
 direction = point_direction(x, y, x + tx, y + ty);
+
+/// @DnDAction : YoYo Games.Common.Variable
+/// @DnDVersion : 1
+/// @DnDHash : 29AB1BBE
+/// @DnDArgument : "expr" "EnergyTemp"
+/// @DnDArgument : "expr_relative" "1"
+/// @DnDArgument : "var" "Energy"
+Energy += EnergyTemp;
 
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1

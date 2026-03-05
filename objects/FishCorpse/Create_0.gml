@@ -23,9 +23,9 @@ Decay = 0;
 /// @DnDHash : 14A28777
 /// @DnDArgument : "var" "Decay"
 /// @DnDArgument : "type" "1"
-/// @DnDArgument : "min" "5"
-/// @DnDArgument : "max" "35"
-Decay = floor(random_range(5, 35 + 1));
+/// @DnDArgument : "min" "15"
+/// @DnDArgument : "max" "120"
+Decay = floor(random_range(15, 120 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -106,9 +106,9 @@ if(tx > 0){	/// @DnDAction : YoYo Games.Instances.Set_Sprite
 /// @DnDVersion : 1
 /// @DnDHash : 3B2D37BC
 /// @DnDArgument : "var" "Size"
-/// @DnDArgument : "min" "0.4"
-/// @DnDArgument : "max" "0.6"
-Size = (random_range(0.4, 0.6));
+/// @DnDArgument : "min" "0.3"
+/// @DnDArgument : "max" "0.5"
+Size = (random_range(0.3, 0.5));
 
 /// @DnDAction : YoYo Games.Instances.Sprite_Scale
 /// @DnDVersion : 1

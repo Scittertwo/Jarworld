@@ -92,6 +92,18 @@ tx = (random_range(-1000, 1000));
 /// @DnDArgument : "max" "1000"
 ty = (random_range(-1000, 1000));
 
+/// @DnDAction : YoYo Games.Rooms.If_First_Room
+/// @DnDVersion : 1
+/// @DnDHash : 1D752C01
+/// @DnDArgument : "not" "1"
+if(room != room_first){	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 0FD0CFFE
+	/// @DnDParent : 1D752C01
+	/// @DnDArgument : "expr" "Size/2"
+	/// @DnDArgument : "var" "Size"
+	Size = Size/2;}
+
 /// @DnDAction : YoYo Games.Instances.Sprite_Rotate
 /// @DnDVersion : 1
 /// @DnDHash : 02A6D4E1

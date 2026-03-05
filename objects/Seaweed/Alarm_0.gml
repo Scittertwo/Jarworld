@@ -1,3 +1,11 @@
+/// @DnDAction : YoYo Games.Instances.Instance_Get_Count
+/// @DnDVersion : 1
+/// @DnDHash : 52C26526
+/// @DnDArgument : "var" "SeaweedN"
+/// @DnDArgument : "object" "Seaweed"
+/// @DnDSaveInfo : "object" "Seaweed"
+SeaweedN = instance_number(Seaweed);
+
 /// @DnDAction : YoYo Games.Collisions.If_Object_At
 /// @DnDVersion : 1.1
 /// @DnDHash : 046BCDA1
@@ -29,6 +37,15 @@ else{	/// @DnDAction : YoYo Games.Common.Variable
 /// @DnDHash : 7C1DAB55
 /// @DnDArgument : "var" "Planted"
 if(Planted == 0){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 39393E47
+	/// @DnDParent : 7C1DAB55
+	/// @DnDArgument : "var" "Tick"
+	/// @DnDArgument : "min" "2"
+	/// @DnDArgument : "max" "3"
+	Tick = (random_range(2, 3));
+
+	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDVersion : 1
 	/// @DnDHash : 4DA70ED7
 	/// @DnDParent : 7C1DAB55
@@ -88,9 +105,9 @@ if(Planted == 1){	/// @DnDAction : YoYo Games.Movement.Set_Speed
 		/// @DnDParent : 1DA21557
 		/// @DnDArgument : "xscale" "0.02"
 		/// @DnDArgument : "xscale_relative" "1"
-		/// @DnDArgument : "yscale" "0.02"
+		/// @DnDArgument : "yscale" "0.02*1.25"
 		/// @DnDArgument : "yscale_relative" "1"
-		image_xscale += 0.02;image_yscale += 0.02;}
+		image_xscale += 0.02;image_yscale += 0.02*1.25;}
 
 	/// @DnDAction : YoYo Games.Common.Else
 	/// @DnDVersion : 1
@@ -124,23 +141,14 @@ if(Planted == 1){	/// @DnDAction : YoYo Games.Movement.Set_Speed
 		/// @DnDVersion : 1
 		/// @DnDHash : 535ABE1C
 		/// @DnDParent : 448328C9
-		else{	/// @DnDAction : YoYo Games.Instances.Instance_Get_Count
-			/// @DnDVersion : 1
-			/// @DnDHash : 52C26526
-			/// @DnDParent : 535ABE1C
-			/// @DnDArgument : "var" "SeaweedN"
-			/// @DnDArgument : "object" "Seaweed"
-			/// @DnDSaveInfo : "object" "Seaweed"
-			SeaweedN = instance_number(Seaweed);
-		
-			/// @DnDAction : YoYo Games.Common.If_Variable
+		else{	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDVersion : 1
 			/// @DnDHash : 0424559A
 			/// @DnDParent : 535ABE1C
 			/// @DnDArgument : "var" "SeaweedN"
 			/// @DnDArgument : "op" "1"
-			/// @DnDArgument : "value" "40"
-			if(SeaweedN < 40){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+			/// @DnDArgument : "value" "100"
+			if(SeaweedN < 100){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 				/// @DnDVersion : 1
 				/// @DnDHash : 5813A1F4
 				/// @DnDParent : 0424559A
@@ -181,7 +189,16 @@ if(Planted == 1){	/// @DnDAction : YoYo Games.Movement.Set_Speed
 					/// @DnDArgument : "type" "1"
 					/// @DnDArgument : "min" "15"
 					/// @DnDArgument : "max" "25"
-					TargetEnergy = floor(random_range(15, 25 + 1));}}}}}
+					TargetEnergy = floor(random_range(15, 25 + 1));}}}}
+
+	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 08D5FA62
+	/// @DnDParent : 3737FABE
+	/// @DnDArgument : "var" "Tick"
+	/// @DnDArgument : "min" "0.5"
+	/// @DnDArgument : "max" "1.5"
+	Tick = (random_range(0.5, 1.5));}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
@@ -222,14 +239,6 @@ else{	/// @DnDAction : YoYo Games.Instances.Set_Alarm
 	/// @DnDArgument : "steps" "1"
 	/// @DnDArgument : "alarm" "11"
 	alarm_set(11, 1);}
-
-/// @DnDAction : YoYo Games.Random.Get_Random_Number
-/// @DnDVersion : 1
-/// @DnDHash : 28863CFF
-/// @DnDArgument : "var" "Tick"
-/// @DnDArgument : "min" "0.5"
-/// @DnDArgument : "max" "1.5"
-Tick = (random_range(0.5, 1.5));
 
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
