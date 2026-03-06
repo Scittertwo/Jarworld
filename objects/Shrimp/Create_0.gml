@@ -1,8 +1,9 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 73279D1C
-/// @DnDInput : 8
+/// @DnDInput : 10
 /// @DnDArgument : "expr_5" "20"
+/// @DnDArgument : "expr_9" "100"
 /// @DnDArgument : "var" "tx"
 /// @DnDArgument : "var_1" "ty"
 /// @DnDArgument : "var_2" "Energy"
@@ -11,6 +12,8 @@
 /// @DnDArgument : "var_5" "Cooldown"
 /// @DnDArgument : "var_6" "Rotation"
 /// @DnDArgument : "var_7" "Tick"
+/// @DnDArgument : "var_8" "Idle"
+/// @DnDArgument : "var_9" "Health"
 tx = 0;
 ty = 0;
 Energy = 0;
@@ -19,6 +22,8 @@ Speed = 0;
 Cooldown = 20;
 Rotation = 0;
 Tick = 0;
+Idle = 0;
+Health = 100;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -48,9 +53,9 @@ ty = (random_range(-90, 90));
 /// @DnDVersion : 1
 /// @DnDHash : 313ABECD
 /// @DnDArgument : "var" "Size"
-/// @DnDArgument : "min" "0.1"
-/// @DnDArgument : "max" "0.2"
-Size = (random_range(0.1, 0.2));
+/// @DnDArgument : "min" "0.2"
+/// @DnDArgument : "max" "0.5"
+Size = (random_range(0.2, 0.5));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -65,9 +70,9 @@ Rotation = (random_range(-90, 90));
 /// @DnDHash : 760E6C92
 /// @DnDArgument : "var" "Energy"
 /// @DnDArgument : "type" "1"
-/// @DnDArgument : "min" "30"
-/// @DnDArgument : "max" "60"
-Energy = floor(random_range(30, 60 + 1));
+/// @DnDArgument : "min" "60"
+/// @DnDArgument : "max" "80"
+Energy = floor(random_range(60, 80 + 1));
 
 /// @DnDAction : YoYo Games.Movement.Set_Direction_Point
 /// @DnDVersion : 1
@@ -109,9 +114,9 @@ image_xscale = Size;image_yscale = Size;
 /// @DnDVersion : 1
 /// @DnDHash : 5E5EEF3D
 /// @DnDArgument : "var" "PitchSet"
-/// @DnDArgument : "min" "1"
-/// @DnDArgument : "max" "4"
-PitchSet = (random_range(1, 4));
+/// @DnDArgument : "min" "0.8"
+/// @DnDArgument : "max" "1.2"
+PitchSet = (random_range(0.8, 1.2));
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1

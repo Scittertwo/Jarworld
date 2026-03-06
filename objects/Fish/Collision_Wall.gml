@@ -19,8 +19,8 @@ if(Speed > 7){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDArgument : "var" "BubbleCount"
 	/// @DnDArgument : "type" "1"
 	/// @DnDArgument : "min" "1"
-	/// @DnDArgument : "max" "5"
-	BubbleCount = floor(random_range(1, 5 + 1));
+	/// @DnDArgument : "max" "2"
+	BubbleCount = floor(random_range(1, 2 + 1));
 
 	/// @DnDAction : YoYo Games.Loops.Repeat
 	/// @DnDVersion : 1

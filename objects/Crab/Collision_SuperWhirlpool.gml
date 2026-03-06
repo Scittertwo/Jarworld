@@ -5,6 +5,15 @@
 /// @DnDArgument : "var" "global.WhirlPower"
 WhirlpowerTemp = global.WhirlPower;
 
+/// @DnDAction : YoYo Games.Movement.Jump_To_Point
+/// @DnDVersion : 1
+/// @DnDHash : 56FBBE26
+/// @DnDArgument : "x" "0"
+/// @DnDArgument : "x_relative" "1"
+/// @DnDArgument : "y" "-1"
+/// @DnDArgument : "y_relative" "1"
+x += 0;y += -1;
+
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
 /// @DnDHash : 6B21390C

@@ -2,10 +2,9 @@
 /// @DnDVersion : 1
 /// @DnDHash : 390F4BF1
 /// @DnDArgument : "var" "PitchSet"
-/// @DnDArgument : "type" "1"
-/// @DnDArgument : "min" "1"
-/// @DnDArgument : "max" "4"
-PitchSet = floor(random_range(1, 4 + 1));
+/// @DnDArgument : "min" "0.1"
+/// @DnDArgument : "max" "1.5"
+PitchSet = (random_range(0.1, 1.5));
 
 /// @DnDAction : YoYo Games.Audio.Play_Audio
 /// @DnDVersion : 1.1

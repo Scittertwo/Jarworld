@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4CEE084D
-/// @DnDInput : 7
+/// @DnDInput : 8
 /// @DnDArgument : "expr" "0.1"
 /// @DnDArgument : "var" "Size"
 /// @DnDArgument : "var_1" "Rotation"
@@ -10,6 +10,7 @@
 /// @DnDArgument : "var_4" "ty"
 /// @DnDArgument : "var_5" "Tick"
 /// @DnDArgument : "var_6" "Decay"
+/// @DnDArgument : "var_7" "Sprite"
 Size = 0.1;
 Rotation = 0;
 Speed = 0;
@@ -17,6 +18,7 @@ tx = 0;
 ty = 0;
 Tick = 0;
 Decay = 0;
+Sprite = 0;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -139,3 +141,31 @@ audio_play_sound(Skeleton, 0, 0, 1.0, undefined, PitchSet);
 /// @DnDHash : 024E7CD8
 /// @DnDArgument : "steps" "Tick*60"
 alarm_set(0, Tick*60);
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 6F4547C2
+/// @DnDArgument : "var" "Sprite"
+/// @DnDArgument : "value" "1"
+if(Sprite == 1){	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 00B39A80
+	/// @DnDParent : 6F4547C2
+	/// @DnDArgument : "spriteind" "FishCorpseLSprite"
+	/// @DnDSaveInfo : "spriteind" "FishCorpseLSprite"
+	sprite_index = FishCorpseLSprite;
+	image_index = 0;}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 2D3B60DF
+/// @DnDArgument : "var" "Sprite"
+/// @DnDArgument : "value" "2"
+if(Sprite == 2){	/// @DnDAction : YoYo Games.Instances.Set_Sprite
+	/// @DnDVersion : 1
+	/// @DnDHash : 32D24718
+	/// @DnDParent : 2D3B60DF
+	/// @DnDArgument : "spriteind" "FishCorpseRSprite"
+	/// @DnDSaveInfo : "spriteind" "FishCorpseRSprite"
+	sprite_index = FishCorpseRSprite;
+	image_index = 0;}

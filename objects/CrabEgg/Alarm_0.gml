@@ -58,8 +58,8 @@ else{	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDArgument : "var" "CrabN"
 	/// @DnDArgument : "type" "1"
 	/// @DnDArgument : "min" "1"
-	/// @DnDArgument : "max" "3"
-	CrabN = floor(random_range(1, 3 + 1));
+	/// @DnDArgument : "max" "5"
+	CrabN = floor(random_range(1, 5 + 1));
 
 	/// @DnDAction : YoYo Games.Loops.Repeat
 	/// @DnDVersion : 1

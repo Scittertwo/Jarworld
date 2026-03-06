@@ -22,7 +22,21 @@ if(TardSpawn == 1){	/// @DnDAction : YoYo Games.Rooms.If_First_Room
 		/// @DnDArgument : "ypos_relative" "1"
 		/// @DnDArgument : "objectid" "TardigradeEgg"
 		/// @DnDSaveInfo : "objectid" "TardigradeEgg"
-		instance_create_layer(x + 0, y + 0, "Instances", TardigradeEgg);}}
+		instance_create_layer(x + 0, y + 0, "Instances", TardigradeEgg);}
+
+	/// @DnDAction : YoYo Games.Common.Else
+	/// @DnDVersion : 1
+	/// @DnDHash : 67E43DA2
+	/// @DnDParent : 10F326E5
+	else{	/// @DnDAction : YoYo Games.Instances.Create_Instance
+		/// @DnDVersion : 1
+		/// @DnDHash : 4A002F37
+		/// @DnDParent : 67E43DA2
+		/// @DnDArgument : "xpos_relative" "1"
+		/// @DnDArgument : "ypos_relative" "1"
+		/// @DnDArgument : "objectid" "Jellyfish"
+		/// @DnDSaveInfo : "objectid" "Jellyfish"
+		instance_create_layer(x + 0, y + 0, "Instances", Jellyfish);}}
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

@@ -14,11 +14,20 @@ if(Cooldown > 0){	/// @DnDAction : YoYo Games.Common.Variable
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
+/// @DnDHash : 6743F118
+/// @DnDArgument : "var" "Idle"
+/// @DnDArgument : "type" "1"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "5"
+Idle = floor(random_range(1, 5 + 1));
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
 /// @DnDHash : 1C981512
 /// @DnDArgument : "var" "Tick"
 /// @DnDArgument : "min" "0.25"
-/// @DnDArgument : "max" "2.5"
-Tick = (random_range(0.25, 2.5));
+/// @DnDArgument : "max" "0.75"
+Tick = (random_range(0.25, 0.75));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -36,13 +45,33 @@ tx = (random_range(-90, 90));
 /// @DnDArgument : "max" "90"
 ty = (random_range(-90, 90));
 
-/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
-/// @DnDHash : 6504764C
-/// @DnDArgument : "var" "Speed"
-/// @DnDArgument : "min" "1"
-/// @DnDArgument : "max" "3"
-Speed = (random_range(1, 3));
+/// @DnDHash : 6D730D4C
+/// @DnDArgument : "var" "Idle"
+/// @DnDArgument : "not" "1"
+/// @DnDArgument : "value" "1"
+if(!(Idle == 1)){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 6504764C
+	/// @DnDParent : 6D730D4C
+	/// @DnDArgument : "var" "Speed"
+	/// @DnDArgument : "min" "1"
+	/// @DnDArgument : "max" "3"
+	Speed = (random_range(1, 3));}
+
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 5BDB5C6E
+/// @DnDArgument : "var" "Idle"
+/// @DnDArgument : "value" "1"
+if(Idle == 1){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 3BDD0F4A
+	/// @DnDParent : 5BDB5C6E
+	/// @DnDArgument : "var" "Speed"
+	/// @DnDArgument : "max" "0.2"
+	Speed = (random_range(0, 0.2));}
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

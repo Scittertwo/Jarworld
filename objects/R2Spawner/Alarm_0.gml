@@ -32,6 +32,14 @@ FishEggN = instance_number(FishEgg);
 
 /// @DnDAction : YoYo Games.Instances.Instance_Get_Count
 /// @DnDVersion : 1
+/// @DnDHash : 4B23FF75
+/// @DnDArgument : "var" "KelpBitN"
+/// @DnDArgument : "object" "KelpBit"
+/// @DnDSaveInfo : "object" "KelpBit"
+KelpBitN = instance_number(KelpBit);
+
+/// @DnDAction : YoYo Games.Instances.Instance_Get_Count
+/// @DnDVersion : 1
 /// @DnDHash : 3F0F93F2
 /// @DnDArgument : "var" "CosmeticBubbleN"
 /// @DnDArgument : "object" "CosmeticBubble"
@@ -202,7 +210,15 @@ if(CrabN < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
 			/// @DnDArgument : "var" "FishEggN"
 			/// @DnDArgument : "op" "4"
 			/// @DnDArgument : "value" "4"
-			if(FishEggN >= 4){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+			if(FishEggN >= 4){	/// @DnDAction : YoYo Games.Common.Variable
+				/// @DnDVersion : 1
+				/// @DnDHash : 43D46C51
+				/// @DnDParent : 34897592
+				/// @DnDArgument : "expr" "30"
+				/// @DnDArgument : "var" "Cooldown"
+				Cooldown = 30;
+			
+				/// @DnDAction : YoYo Games.Random.Get_Random_Number
 				/// @DnDVersion : 1
 				/// @DnDHash : 7E9A3D58
 				/// @DnDParent : 34897592
@@ -230,21 +246,39 @@ if(CrabN < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1
 /// @DnDHash : 4793A0BE
-/// @DnDArgument : "var" "FishCorpseN"
+/// @DnDArgument : "var" "KelpBitN"
 /// @DnDArgument : "op" "4"
-/// @DnDArgument : "value" "3"
-if(FishCorpseN >= 3){	/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDArgument : "value" "20"
+if(KelpBitN >= 20){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 08E62335
 	/// @DnDParent : 4793A0BE
 	/// @DnDArgument : "var" "ShrimpN"
 	/// @DnDArgument : "op" "3"
-	if(ShrimpN <= 0){	/// @DnDAction : YoYo Games.Loops.Repeat
+	if(ShrimpN <= 0){	/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 461A15EE
+		/// @DnDParent : 08E62335
+		/// @DnDArgument : "expr" "30"
+		/// @DnDArgument : "var" "Cooldown"
+		Cooldown = 30;
+	
+		/// @DnDAction : YoYo Games.Random.Get_Random_Number
+		/// @DnDVersion : 1
+		/// @DnDHash : 2D076E08
+		/// @DnDParent : 08E62335
+		/// @DnDArgument : "var" "ShrimpSpawn"
+		/// @DnDArgument : "type" "1"
+		/// @DnDArgument : "min" "4"
+		/// @DnDArgument : "max" "8"
+		ShrimpSpawn = floor(random_range(4, 8 + 1));
+	
+		/// @DnDAction : YoYo Games.Loops.Repeat
 		/// @DnDVersion : 1
 		/// @DnDHash : 3914EAEC
 		/// @DnDParent : 08E62335
-		/// @DnDArgument : "times" "FishCorpseN*2"
-		repeat(FishCorpseN*2){	/// @DnDAction : YoYo Games.Instances.Create_Instance
+		/// @DnDArgument : "times" "ShrimpSpawn"
+		repeat(ShrimpSpawn){	/// @DnDAction : YoYo Games.Instances.Create_Instance
 			/// @DnDVersion : 1
 			/// @DnDHash : 31A3E33E
 			/// @DnDParent : 3914EAEC

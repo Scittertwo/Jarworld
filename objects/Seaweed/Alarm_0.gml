@@ -147,16 +147,16 @@ if(Planted == 1){	/// @DnDAction : YoYo Games.Movement.Set_Speed
 			/// @DnDParent : 535ABE1C
 			/// @DnDArgument : "var" "SeaweedN"
 			/// @DnDArgument : "op" "1"
-			/// @DnDArgument : "value" "100"
-			if(SeaweedN < 100){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+			/// @DnDArgument : "value" "150"
+			if(SeaweedN < 150){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 				/// @DnDVersion : 1
 				/// @DnDHash : 5813A1F4
 				/// @DnDParent : 0424559A
 				/// @DnDArgument : "var" "SporeCount"
 				/// @DnDArgument : "type" "1"
 				/// @DnDArgument : "min" "1"
-				/// @DnDArgument : "max" "3"
-				SporeCount = floor(random_range(1, 3 + 1));
+				/// @DnDArgument : "max" "6"
+				SporeCount = floor(random_range(1, 6 + 1));
 			
 				/// @DnDAction : YoYo Games.Loops.Repeat
 				/// @DnDVersion : 1

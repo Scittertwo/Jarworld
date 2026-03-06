@@ -7,10 +7,10 @@
 /// @DnDArgument : "max" "20"
 EnergyTemp = floor(random_range(10, 20 + 1));
 
-/// @DnDAction : YoYo Games.Movement.Set_Speed
+/// @DnDAction : YoYo Games.Movement.Reverse
 /// @DnDVersion : 1
-/// @DnDHash : 1809E40A
-speed = 0;
+/// @DnDHash : 52921674
+direction = (direction + 180) % 360;
 
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1

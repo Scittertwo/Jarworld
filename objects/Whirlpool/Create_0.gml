@@ -25,8 +25,8 @@ TardSpawn = 0;
 /// @DnDArgument : "var" "TardSpawn"
 /// @DnDArgument : "type" "1"
 /// @DnDArgument : "min" "1"
-/// @DnDArgument : "max" "50"
-TardSpawn = floor(random_range(1, 50 + 1));
+/// @DnDArgument : "max" "40"
+TardSpawn = floor(random_range(1, 40 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -48,9 +48,9 @@ Tick = (random_range(1, 60));
 /// @DnDVersion : 1
 /// @DnDHash : 4ED96B99
 /// @DnDArgument : "var" "Size"
-/// @DnDArgument : "min" "0.2"
-/// @DnDArgument : "max" "0.7"
-Size = (random_range(0.2, 0.7));
+/// @DnDArgument : "min" "0.1"
+/// @DnDArgument : "max" "0.5"
+Size = (random_range(0.1, 0.5));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

@@ -2,8 +2,8 @@
 /// @DnDVersion : 1
 /// @DnDHash : 1D730869
 /// @DnDInput : 7
-/// @DnDArgument : "expr_3" "500"
-/// @DnDArgument : "expr_4" "1200"
+/// @DnDArgument : "expr_3" "100"
+/// @DnDArgument : "expr_4" "150"
 /// @DnDArgument : "expr_5" "15"
 /// @DnDArgument : "expr_6" "3"
 /// @DnDArgument : "var" "Rev"
@@ -16,8 +16,8 @@
 Rev = 0;
 WhirlSpawn = 0;
 Cooldown = 0;
-MinCosmeticBubbles = 500;
-MaxCosmeticBubbles = 1200;
+MinCosmeticBubbles = 100;
+MaxCosmeticBubbles = 150;
 CosBubSpawnTime = 15;
 Cooldown = 3;
 

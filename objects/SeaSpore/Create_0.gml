@@ -57,8 +57,8 @@ Far = floor(random_range(1, 10 + 1));
 /// @DnDArgument : "var" "TargetGrowth"
 /// @DnDArgument : "type" "1"
 /// @DnDArgument : "min" "3"
-/// @DnDArgument : "max" "25"
-TargetGrowth = floor(random_range(3, 25 + 1));
+/// @DnDArgument : "max" "10"
+TargetGrowth = floor(random_range(3, 10 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -91,6 +91,25 @@ if(Far == 1){	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDArgument : "min" "1"
 	/// @DnDArgument : "max" "5"
 	Speed = (random_range(1, 5));
+
+	/// @DnDAction : YoYo Games.Random.Get_Random_Number
+	/// @DnDVersion : 1
+	/// @DnDHash : 0CA76CC6
+	/// @DnDParent : 5FAF9D1C
+	/// @DnDArgument : "var" "TargetGrowthTemp"
+	/// @DnDArgument : "type" "1"
+	/// @DnDArgument : "min" "1"
+	/// @DnDArgument : "max" "10"
+	TargetGrowthTemp = floor(random_range(1, 10 + 1));
+
+	/// @DnDAction : YoYo Games.Common.Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 21B74A61
+	/// @DnDParent : 5FAF9D1C
+	/// @DnDArgument : "expr" "TargetGrowthTemp"
+	/// @DnDArgument : "expr_relative" "1"
+	/// @DnDArgument : "var" "TargetGrowth"
+	TargetGrowth += TargetGrowthTemp;
 
 	/// @DnDAction : YoYo Games.Instances.Set_Alarm
 	/// @DnDVersion : 1
