@@ -3,9 +3,9 @@
 /// @DnDHash : 2B801191
 /// @DnDArgument : "var" "EnergyTemp"
 /// @DnDArgument : "type" "1"
-/// @DnDArgument : "min" "10"
-/// @DnDArgument : "max" "20"
-EnergyTemp = floor(random_range(10, 20 + 1));
+/// @DnDArgument : "min" "20"
+/// @DnDArgument : "max" "40"
+EnergyTemp = floor(random_range(20, 40 + 1));
 
 /// @DnDAction : YoYo Games.Movement.Reverse
 /// @DnDVersion : 1

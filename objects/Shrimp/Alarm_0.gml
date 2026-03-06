@@ -99,11 +99,11 @@ if(Energy > 100){	/// @DnDAction : YoYo Games.Common.If_Variable
 		/// @DnDInput : 2
 		/// @DnDParent : 5BE274EA
 		/// @DnDArgument : "expr" "30"
-		/// @DnDArgument : "expr_1" "20"
+		/// @DnDArgument : "expr_1" "5"
 		/// @DnDArgument : "var" "Energy"
 		/// @DnDArgument : "var_1" "Cooldown"
 		Energy = 30;
-		Cooldown = 20;
+		Cooldown = 5;
 	
 		/// @DnDAction : YoYo Games.Random.Get_Random_Number
 		/// @DnDVersion : 1

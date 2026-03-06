@@ -16,9 +16,9 @@ repeat(Cloud){	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDParent : 3FF3791C
 	/// @DnDArgument : "xpos_relative" "1"
 	/// @DnDArgument : "ypos_relative" "1"
-	/// @DnDArgument : "objectid" "CosmeticBubbleSpawn"
-	/// @DnDSaveInfo : "objectid" "CosmeticBubbleSpawn"
-	instance_create_layer(x + 0, y + 0, "Instances", CosmeticBubbleSpawn);}
+	/// @DnDArgument : "objectid" "CosmeticBubble"
+	/// @DnDSaveInfo : "objectid" "CosmeticBubble"
+	instance_create_layer(x + 0, y + 0, "Instances", CosmeticBubble);}
 
 /// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1

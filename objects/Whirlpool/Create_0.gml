@@ -25,8 +25,8 @@ TardSpawn = 0;
 /// @DnDArgument : "var" "TardSpawn"
 /// @DnDArgument : "type" "1"
 /// @DnDArgument : "min" "1"
-/// @DnDArgument : "max" "40"
-TardSpawn = floor(random_range(1, 40 + 1));
+/// @DnDArgument : "max" "20"
+TardSpawn = floor(random_range(1, 20 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

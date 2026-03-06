@@ -33,10 +33,10 @@ if(Size < MaxSize){	/// @DnDAction : YoYo Games.Common.Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 2BEAED1C
 	/// @DnDParent : 103B8FD8
-	/// @DnDArgument : "expr" "0.1"
+	/// @DnDArgument : "expr" "0.05"
 	/// @DnDArgument : "expr_relative" "1"
 	/// @DnDArgument : "var" "Size"
-	Size += 0.1;}
+	Size += 0.05;}
 
 /// @DnDAction : YoYo Games.Instances.Sprite_Scale
 /// @DnDVersion : 1

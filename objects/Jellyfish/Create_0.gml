@@ -38,6 +38,14 @@ Size = (random_range(0.05, 0.1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
+/// @DnDHash : 161D0937
+/// @DnDArgument : "var" "MaxSize"
+/// @DnDArgument : "min" "0.5"
+/// @DnDArgument : "max" "1.5"
+MaxSize = (random_range(0.5, 1.5));
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
 /// @DnDHash : 31B6377F
 /// @DnDArgument : "var" "Speed"
 /// @DnDArgument : "min" "0.1"
@@ -58,8 +66,8 @@ Tick = (random_range(1, 2));
 /// @DnDArgument : "var" "Age"
 /// @DnDArgument : "type" "1"
 /// @DnDArgument : "min" "60"
-/// @DnDArgument : "max" "180"
-Age = floor(random_range(60, 180 + 1));
+/// @DnDArgument : "max" "300"
+Age = floor(random_range(60, 300 + 1));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1

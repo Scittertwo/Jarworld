@@ -1,3 +1,11 @@
+/// @DnDAction : YoYo Games.Instances.Instance_Get_Count
+/// @DnDVersion : 1
+/// @DnDHash : 7A61CACB
+/// @DnDArgument : "var" "CosbubN"
+/// @DnDArgument : "object" "CosmeticBubble"
+/// @DnDSaveInfo : "object" "CosmeticBubble"
+CosbubN = instance_number(CosmeticBubble);
+
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 120D9566

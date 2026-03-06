@@ -188,8 +188,8 @@ if(Cooldown < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDHash : 5179C3EA
 /// @DnDArgument : "var" "CrabN"
 /// @DnDArgument : "op" "1"
-/// @DnDArgument : "value" "1"
-if(CrabN < 1){	/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDArgument : "value" "2"
+if(CrabN < 2){	/// @DnDAction : YoYo Games.Common.If_Variable
 	/// @DnDVersion : 1
 	/// @DnDHash : 398E9F5B
 	/// @DnDParent : 5179C3EA

@@ -32,13 +32,6 @@ Cooldown = 3;
 global.MinCosBubs = MinCosmeticBubbles;
 global.MaxCosBubs = MaxCosmeticBubbles;
 
-/// @DnDAction : YoYo Games.Instances.Set_Alarm
-/// @DnDVersion : 1
-/// @DnDHash : 5EF9635A
-/// @DnDArgument : "steps" "CosBubSpawnTime"
-/// @DnDArgument : "alarm" "4"
-alarm_set(4, CosBubSpawnTime);
-
 /// @DnDAction : YoYo Games.Random.Randomize
 /// @DnDVersion : 1
 /// @DnDHash : 085EEF02

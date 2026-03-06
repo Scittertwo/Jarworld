@@ -37,6 +37,18 @@ image_angle += Rotation;
 /// @DnDArgument : "max" "60"
 Tick = floor(random_range(1, 60 + 1));
 
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 23B69601
+/// @DnDArgument : "var" "CosbubN"
+/// @DnDArgument : "op" "2"
+/// @DnDArgument : "value" "500"
+if(CosbubN > 500){	/// @DnDAction : YoYo Games.Instances.Destroy_Instance
+	/// @DnDVersion : 1
+	/// @DnDHash : 4F797F35
+	/// @DnDParent : 23B69601
+	instance_destroy();}
+
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
 /// @DnDHash : 391DA01D

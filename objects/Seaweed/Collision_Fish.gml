@@ -4,8 +4,8 @@
 /// @DnDArgument : "var" "BitCount"
 /// @DnDArgument : "type" "1"
 /// @DnDArgument : "min" "1"
-/// @DnDArgument : "max" "5"
-BitCount = floor(random_range(1, 5 + 1));
+/// @DnDArgument : "max" "7"
+BitCount = floor(random_range(1, 7 + 1));
 
 /// @DnDAction : YoYo Games.Loops.Repeat
 /// @DnDVersion : 1
