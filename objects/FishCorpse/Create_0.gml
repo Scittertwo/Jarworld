@@ -3,6 +3,7 @@
 /// @DnDHash : 4CEE084D
 /// @DnDInput : 7
 /// @DnDArgument : "expr" "0.1"
+/// @DnDArgument : "expr_relative_6" "1"
 /// @DnDArgument : "var" "Size"
 /// @DnDArgument : "var_1" "Rotation"
 /// @DnDArgument : "var_2" "Speed"
@@ -16,7 +17,7 @@ Speed = 0;
 tx = 0;
 ty = 0;
 Tick = 0;
-Decay = 0;
+Decay += 0;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -117,13 +118,25 @@ Size = (random_range(0.3, 0.5));
 /// @DnDArgument : "yscale" "Size"
 image_xscale = Size;image_yscale = Size;
 
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
+/// @DnDHash : 475FD3C7
+/// @DnDArgument : "var" "PitchSet"
+/// @DnDArgument : "type" "1"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "3"
+PitchSet = floor(random_range(1, 3 + 1));
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 420ABB49
+/// @DnDArgument : "soundid" "Skeleton"
+/// @DnDArgument : "pitch" "PitchSet"
+/// @DnDSaveInfo : "soundid" "Skeleton"
+audio_play_sound(Skeleton, 0, 0, 1.0, undefined, PitchSet);
+
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
 /// @DnDHash : 024E7CD8
 /// @DnDArgument : "steps" "Tick*60"
 alarm_set(0, Tick*60);
-
-/// @DnDAction : YoYo Games.Random.Get_Random_Number
-/// @DnDVersion : 1
-/// @DnDHash : 475FD3C7
-variable = (random_range(0, 1));

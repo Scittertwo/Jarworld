@@ -46,6 +46,27 @@ direction = point_direction(x, y, x + tx, y + ty);
 /// @DnDArgument : "speed" "Speed"
 speed = Speed;
 
+/// @DnDAction : YoYo Games.Common.If_Variable
+/// @DnDVersion : 1
+/// @DnDHash : 61D0FC98
+/// @DnDArgument : "var" "cy"
+/// @DnDArgument : "op" "2"
+if(cy > 0){	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 7644D010
+	/// @DnDParent : 61D0FC98
+	/// @DnDArgument : "var" "cy"
+	/// @DnDArgument : "op" "1"
+	/// @DnDArgument : "value" "766"
+	if(cy < 766){	/// @DnDAction : YoYo Games.Audio.Play_Audio
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 2F926A7F
+		/// @DnDParent : 7644D010
+		/// @DnDArgument : "soundid" "bubble"
+		/// @DnDArgument : "pitch" "PitchSet"
+		/// @DnDSaveInfo : "soundid" "bubble"
+		audio_play_sound(bubble, 0, 0, 1.0, undefined, PitchSet);}}
+
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
 /// @DnDHash : 1BFBD6CE

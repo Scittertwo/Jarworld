@@ -36,6 +36,22 @@ BumpCount = 0;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
+/// @DnDHash : 75CE12A9
+/// @DnDArgument : "var" "PitchSet"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "3"
+PitchSet = (random_range(1, 3));
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 02D17DFF
+/// @DnDArgument : "soundid" "Blub"
+/// @DnDArgument : "pitch" "PitchSet"
+/// @DnDSaveInfo : "soundid" "Blub"
+audio_play_sound(Blub, 0, 0, 1.0, undefined, PitchSet);
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
 /// @DnDHash : 39D4B8E8
 /// @DnDArgument : "var" "Size"
 /// @DnDArgument : "min" "0.05"

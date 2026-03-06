@@ -44,6 +44,13 @@ JumpDistance = 0;
 ReadyForKelp = 0;
 MaxHealth = 10;
 
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 67E00C6C
+/// @DnDArgument : "soundid" "CrabSound"
+/// @DnDSaveInfo : "soundid" "CrabSound"
+audio_play_sound(CrabSound, 0, 0, 1.0, undefined, 1.0);
+
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
 /// @DnDHash : 2FA1A450

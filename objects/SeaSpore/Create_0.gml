@@ -129,6 +129,22 @@ else{	/// @DnDAction : YoYo Games.Random.Get_Random_Number
 	/// @DnDArgument : "alarm" "9"
 	alarm_set(9, Tick*60);}
 
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
+/// @DnDHash : 5D5C0CC5
+/// @DnDArgument : "var" "PitchSet"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "3"
+PitchSet = (random_range(1, 3));
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 23DA10BC
+/// @DnDArgument : "soundid" "Thwip"
+/// @DnDArgument : "pitch" "PitchSet"
+/// @DnDSaveInfo : "soundid" "Thwip"
+audio_play_sound(Thwip, 0, 0, 1.0, undefined, PitchSet);
+
 /// @DnDAction : YoYo Games.Movement.Set_Direction_Point
 /// @DnDVersion : 1
 /// @DnDHash : 31B2E220

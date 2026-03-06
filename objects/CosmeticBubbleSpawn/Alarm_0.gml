@@ -18,9 +18,8 @@ repeat(PhageS){	/// @DnDAction : YoYo Games.Instances.Create_Instance
 	/// @DnDArgument : "xpos_relative" "1"
 	/// @DnDArgument : "ypos_relative" "1"
 	/// @DnDArgument : "objectid" "CosmeticBubble"
-	/// @DnDArgument : "layer" ""Instances_U""
 	/// @DnDSaveInfo : "objectid" "CosmeticBubble"
-	instance_create_layer(x + 0, y + 0, "Instances_U", CosmeticBubble);}
+	instance_create_layer(x + 0, y + 0, "Instances", CosmeticBubble);}
 
 /// @DnDAction : YoYo Games.Instances.Destroy_Instance
 /// @DnDVersion : 1

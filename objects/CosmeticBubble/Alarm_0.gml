@@ -13,14 +13,32 @@ speed = Speed;
 /// @DnDArgument : "y_relative" "1"
 direction = point_direction(x, y, x + global.CosmeticBubbleDir, y + -100);
 
-/// @DnDAction : YoYo Games.Instances.Set_Alarm
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
-/// @DnDHash : 391DA01D
-/// @DnDArgument : "steps" "1"
-alarm_set(0, 1);
+/// @DnDHash : 23B40566
+/// @DnDArgument : "var" "Rotation"
+/// @DnDArgument : "min" "-5"
+/// @DnDArgument : "max" "5"
+Rotation = (random_range(-5, 5));
 
 /// @DnDAction : YoYo Games.Instances.Sprite_Rotate
 /// @DnDVersion : 1
 /// @DnDHash : 143AA88C
 /// @DnDArgument : "angle" "Rotation"
-image_angle = Rotation;
+/// @DnDArgument : "angle_relative" "1"
+image_angle += Rotation;
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
+/// @DnDHash : 3B577485
+/// @DnDArgument : "var" "Tick"
+/// @DnDArgument : "type" "1"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "60"
+Tick = floor(random_range(1, 60 + 1));
+
+/// @DnDAction : YoYo Games.Instances.Set_Alarm
+/// @DnDVersion : 1
+/// @DnDHash : 391DA01D
+/// @DnDArgument : "steps" "Tick"
+alarm_set(0, Tick);

@@ -48,9 +48,9 @@ ty = (random_range(-90, 90));
 /// @DnDVersion : 1
 /// @DnDHash : 313ABECD
 /// @DnDArgument : "var" "Size"
-/// @DnDArgument : "min" "0.025"
-/// @DnDArgument : "max" "0.1"
-Size = (random_range(0.025, 0.1));
+/// @DnDArgument : "min" "0.1"
+/// @DnDArgument : "max" "0.2"
+Size = (random_range(0.1, 0.2));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
@@ -65,9 +65,9 @@ Rotation = (random_range(-90, 90));
 /// @DnDHash : 760E6C92
 /// @DnDArgument : "var" "Energy"
 /// @DnDArgument : "type" "1"
-/// @DnDArgument : "min" "20"
-/// @DnDArgument : "max" "40"
-Energy = floor(random_range(20, 40 + 1));
+/// @DnDArgument : "min" "30"
+/// @DnDArgument : "max" "60"
+Energy = floor(random_range(30, 60 + 1));
 
 /// @DnDAction : YoYo Games.Movement.Set_Direction_Point
 /// @DnDVersion : 1
@@ -104,6 +104,22 @@ image_index = 0;
 /// @DnDArgument : "xscale" "Size"
 /// @DnDArgument : "yscale" "Size"
 image_xscale = Size;image_yscale = Size;
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
+/// @DnDHash : 5E5EEF3D
+/// @DnDArgument : "var" "PitchSet"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "4"
+PitchSet = (random_range(1, 4));
+
+/// @DnDAction : YoYo Games.Audio.Play_Audio
+/// @DnDVersion : 1.1
+/// @DnDHash : 0B441479
+/// @DnDArgument : "soundid" "ShrimpSound"
+/// @DnDArgument : "pitch" "PitchSet"
+/// @DnDSaveInfo : "soundid" "ShrimpSound"
+audio_play_sound(ShrimpSound, 0, 0, 1.0, undefined, PitchSet);
 
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1

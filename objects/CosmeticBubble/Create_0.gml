@@ -60,11 +60,28 @@ Speed = (random_range(0.5, 1.5));
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
+/// @DnDHash : 77B15F5E
+/// @DnDArgument : "var" "Rotation"
+/// @DnDArgument : "min" "-15"
+/// @DnDArgument : "max" "15"
+Rotation = (random_range(-15, 15));
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
 /// @DnDHash : 2C868A51
 /// @DnDArgument : "var" "Distance"
 /// @DnDArgument : "min" "15"
 /// @DnDArgument : "max" "120"
 Distance = (random_range(15, 120));
+
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
+/// @DnDHash : 7F180FE6
+/// @DnDArgument : "var" "PitchSet"
+/// @DnDArgument : "type" "1"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "3"
+PitchSet = floor(random_range(1, 3 + 1));
 
 /// @DnDAction : YoYo Games.Movement.Set_Direction_Point
 /// @DnDVersion : 1

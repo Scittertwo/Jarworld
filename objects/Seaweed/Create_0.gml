@@ -1,7 +1,7 @@
 /// @DnDAction : YoYo Games.Common.Variable
 /// @DnDVersion : 1
 /// @DnDHash : 7AA2E037
-/// @DnDInput : 11
+/// @DnDInput : 12
 /// @DnDArgument : "expr_3" "0.1"
 /// @DnDArgument : "var" "Health"
 /// @DnDArgument : "var_1" "Energy"
@@ -14,6 +14,7 @@
 /// @DnDArgument : "var_8" "Rev"
 /// @DnDArgument : "var_9" "SeaweedN"
 /// @DnDArgument : "var_10" "Rotation"
+/// @DnDArgument : "var_11" "HasPlanted"
 Health = 0;
 Energy = 0;
 TargetEnergy = 0;
@@ -25,6 +26,7 @@ TargetSize = 0;
 Rev = 0;
 SeaweedN = 0;
 Rotation = 0;
+HasPlanted = 0;
 
 /// @DnDAction : YoYo Games.Instances.Instance_Get_Count
 /// @DnDVersion : 1

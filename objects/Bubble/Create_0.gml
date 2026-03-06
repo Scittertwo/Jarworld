@@ -99,12 +99,24 @@ direction = point_direction(x, y, x + tx, y + ty);
 /// @DnDArgument : "speed" "Speed"
 speed = Speed;
 
+/// @DnDAction : YoYo Games.Random.Get_Random_Number
+/// @DnDVersion : 1
+/// @DnDHash : 10E73B21
+/// @DnDArgument : "var" "PitchSet"
+/// @DnDArgument : "type" "1"
+/// @DnDArgument : "min" "1"
+/// @DnDArgument : "max" "4"
+PitchSet = floor(random_range(1, 4 + 1));
+
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
 /// @DnDHash : 59B58A31
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "steps" "Distance"
 /// @DnDArgument : "steps_1" "Distance"
+/// @DnDArgument : "steps_2" "1"
 /// @DnDArgument : "alarm_1" "1"
+/// @DnDArgument : "alarm_2" "2"
 alarm_set(0, Distance);
 alarm_set(1, Distance);
+alarm_set(2, 1);

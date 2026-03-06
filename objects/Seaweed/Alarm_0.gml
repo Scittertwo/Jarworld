@@ -198,7 +198,28 @@ if(Planted == 1){	/// @DnDAction : YoYo Games.Movement.Set_Speed
 	/// @DnDArgument : "var" "Tick"
 	/// @DnDArgument : "min" "0.5"
 	/// @DnDArgument : "max" "1.5"
-	Tick = (random_range(0.5, 1.5));}
+	Tick = (random_range(0.5, 1.5));
+
+	/// @DnDAction : YoYo Games.Common.If_Variable
+	/// @DnDVersion : 1
+	/// @DnDHash : 09210091
+	/// @DnDParent : 3737FABE
+	/// @DnDArgument : "var" "HasPlanted"
+	if(HasPlanted == 0){	/// @DnDAction : YoYo Games.Audio.Play_Audio
+		/// @DnDVersion : 1.1
+		/// @DnDHash : 2CB805B7
+		/// @DnDParent : 09210091
+		/// @DnDArgument : "soundid" "Plant"
+		/// @DnDSaveInfo : "soundid" "Plant"
+		audio_play_sound(Plant, 0, 0, 1.0, undefined, 1.0);
+	
+		/// @DnDAction : YoYo Games.Common.Variable
+		/// @DnDVersion : 1
+		/// @DnDHash : 4A0F50A2
+		/// @DnDParent : 09210091
+		/// @DnDArgument : "expr" "1"
+		/// @DnDArgument : "var" "HasPlanted"
+		HasPlanted = 1;}}
 
 /// @DnDAction : YoYo Games.Common.If_Variable
 /// @DnDVersion : 1

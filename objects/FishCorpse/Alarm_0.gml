@@ -3,7 +3,8 @@
 /// @DnDHash : 18A93BC3
 /// @DnDArgument : "var" "Tick"
 /// @DnDArgument : "min" "0.5"
-Tick = (random_range(0.5, 1));
+/// @DnDArgument : "max" "1.5"
+Tick = (random_range(0.5, 1.5));
 
 /// @DnDAction : YoYo Games.Instances.Sprite_Rotate
 /// @DnDVersion : 1

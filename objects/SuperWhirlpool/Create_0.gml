@@ -118,9 +118,12 @@ global.WhirlPower = Power;
 /// @DnDAction : YoYo Games.Instances.Set_Alarm
 /// @DnDVersion : 1
 /// @DnDHash : 418C5C32
-/// @DnDInput : 2
+/// @DnDInput : 3
 /// @DnDArgument : "steps" "Life"
 /// @DnDArgument : "steps_1" "Tick"
+/// @DnDArgument : "steps_2" "1"
 /// @DnDArgument : "alarm" "11"
+/// @DnDArgument : "alarm_2" "4"
 alarm_set(11, Life);
 alarm_set(0, Tick);
+alarm_set(4, 1);
