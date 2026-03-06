@@ -3,7 +3,6 @@
 /// @DnDHash : 4CEE084D
 /// @DnDInput : 7
 /// @DnDArgument : "expr" "0.1"
-/// @DnDArgument : "expr_relative_6" "1"
 /// @DnDArgument : "var" "Size"
 /// @DnDArgument : "var_1" "Rotation"
 /// @DnDArgument : "var_2" "Speed"
@@ -17,7 +16,7 @@ Speed = 0;
 tx = 0;
 ty = 0;
 Tick = 0;
-Decay += 0;
+Decay = 0;
 
 /// @DnDAction : YoYo Games.Random.Get_Random_Number
 /// @DnDVersion : 1
